@@ -357,7 +357,7 @@ const people = [
 // eslint-disable-next-line no-console
 console.log(people); // you can remove it
 
-const table = document.querySelector('table');
+const table = document.querySelector('.dashboard');
 
 for (const person of people) {
   const tr = document.createElement('tr');
@@ -369,12 +369,13 @@ for (const person of people) {
   const tdCentury = document.createElement('td');
 
   tdName.textContent = person.name;
+  tdGender.textContent = person.sex;
 
-  if (person.sex === 'm') {
-    tdGender.textContent = 'Male';
-  } else {
-    tdGender.textContent = 'Female';
-  }
+  // if (person.sex === 'm') {
+  //   tdGender.textContent = 'Male';
+  // } else {
+  //   tdGender.textContent = 'Female';
+  // }
 
   tdBorn.textContent = person.born;
   tdDied.textContent = person.died;
