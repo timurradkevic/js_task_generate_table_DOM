@@ -369,13 +369,12 @@ for (const person of people) {
   const tdCentury = document.createElement('td');
 
   tdName.textContent = person.name;
-  tdGender.textContent = person.sex;
 
-  // if (person.sex === 'm') {
-  //   tdGender.textContent = 'Male';
-  // } else {
-  //   tdGender.textContent = 'Female';
-  // }
+  if (person.sex === 'm') {
+    tdGender.textContent = person.sex.toUpperCase() + 'ale';
+  } else {
+    tdGender.textContent = person.sex.toUpperCase() + 'emale';
+  }
 
   tdBorn.textContent = person.born;
   tdDied.textContent = person.died;
